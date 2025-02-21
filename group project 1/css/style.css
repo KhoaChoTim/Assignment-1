@@ -1,0 +1,88 @@
+/* home */
+.banner{
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(../img/exchanging-ideas-in-the-boardroom-625741228-5b7efe9b46e0fb0050fbe69f.jpg);
+  background-position: center;
+  background-size: cover;
+  
+}
+
+.navbar{
+  width: 85%;
+  margin: auto;
+  padding: 25px 0;
+  padding-left: 90px;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+.web-name{
+  width: 260px;
+  font-size: 20px;
+  cursor: pointer;
+
+}
+
+.navbar ul li{
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+  
+}
+
+.navbar ul li a{
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+
+}
+
+.navbar ul li::after{
+  content: "";
+  height: 3px;
+  width: 0;
+  background: red;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 1s
+}
+
+.navbar ul li:hover::after{
+  width: 100%;
+
+}
+
+.header-mid{
+  padding-top: 300px;
+  padding-left: 100px;
+  padding-bottom: 300px;
+  font-family: "Audiowide", sans-serif;
+  color: aliceblue;
+  
+}
+
+.head-title{
+  font-size: 40px;
+  font-weight: bolder;
+  color: aliceblue;
+}
+
+.body-head{
+  width: 60%;
+  text-align: center;
+  margin-left: 300px;
+  margin-top: 10px;
+  
+}
+
+.description{
+  font-size: 23px;
+
+}
+  
