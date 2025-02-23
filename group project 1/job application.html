@@ -3,17 +3,78 @@
 <body>
 
 <h2>Application Forms</h2>
-
-<form action="/action_page.php">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" value=""><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname" value=""><br>
-  <label for="Background">Background:</label><br>
-  <input type="text" id="Background" name="Background" value=""><br>
-  <label for="Expectation">Expectation:</label><br>
-  <input type="text" id="Expectation" name="Expectation" value=""><br><br>
-  <input type="submit" value="Submit">
+<table>
+  <caption>Application Forms</caption>
+  <thead>
+  <tr>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td> <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value=""placeholder="John"maxlength="20"required></td>
+  </tr>
+  <tr>
+  <td> <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value=""placeholder="Doe"maxlength="20"required></td> </tr>
+    <tr> <td> <label for="Job reference number">Job reference number:</label><br>
+      <input type="text" id="Job reference number" name="Job reference number" value=""maxlength="5"required></td> </tr>
+      <tr>  <td> <label for="Dob">Date of birth:</label><br>
+        <input type="date" id="Dob" name="Dob" value=""></td></tr>
+        <tr> <td> <label>Gender<br>
+          <input type="text" name="Gender"
+          list="Gender">
+          <datalist id="Gender">
+          <option value = "Male">
+          <option value = "Female"
+          required>
+          </datalist>
+          </label></td> </tr>
+          <tr> <td> <label for="Str add">Street Address:</label><br>
+            <input type="text" id="Str add" name="Str add" value=""required></td> </tr>
+            <tr> <td> <label for="Suburb">Suburb/town:</label><br>
+              <input type="text" id="Suburb" name="Suburb" value=""></td> </tr>
+              <tr> <td> <label for="rank">state</label><br>
+                <select name="rank" id="rank" required>
+                <option value="8">VIC</option>
+                <option value="7">NSW</option>
+                <option value="6">QLD</option>
+                <option value="5">Nt</option>
+                <option value="4">WA</option>
+                <option value="3">SA</option>
+                <option value="2">TAS</option>
+                <option value="1">ACT</option>
+                </select></td> </tr>
+                <tr> <td> <label for="Pc">Postcode:</label><br>
+                  <input type="number" id="Pc" name="Pc" value=""maxlength="4"required></td> </tr>
+                  <tr> <td> <label for="Email">Email address:</label><br>
+                    <input type="email" id="Email" name="Email" value="" placeholder="name@domain.com" pattern="^.+@.+\..{2,3}$"required></td> </tr>
+                    <tr> <td> <label for="Cellphone">Phone number:</label><br>
+                      <input type="tel" id="Cellphone" name="Cellphone" value=""placeholder="(##) ####-####"
+                      pattern="\(\d{2}\) +\d{4}-\d{4}" min="8" max="12" required></td> </tr>
+                      <tr> <td> Skill list
+                        <br />
+                        <label><input type="checkbox" name="things[]"
+                        value="DEV" />DEVELOPER</label> <br>
+                        <label><input type="checkbox" name="things[]"
+                        value="DES" />DESIGNER</label> <br>
+                        <label><input type="checkbox" name="things[]"
+                        value="CON" />CONSULTANT</label><br>
+                        <label><input type="checkbox" name="things[]"
+                          value="TEST" />TESTER</label><br>
+                          <label><input type="checkbox" name="things[]"
+                            value="OS" />Other Skill</label></td> <br>
+                          </tr>
+                        <tr> <td> <label>Other Skill<br />
+                          <textarea name="Other skill"
+                          rows="4" cols="20" placeholder="Enter comments here." required>
+                          </textarea>
+                          </label></td> </tr>
+  </table>
+<form action="/action page.php">
+ <br>
+ <br>
+  <input type="submit" value="Submit" >
 </form> 
 
 <p>Click the "Submit" button once you finished the form</p>
