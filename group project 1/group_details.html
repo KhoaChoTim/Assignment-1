@@ -1,101 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Group's Details</title>
-    <link rel="stylesheet" href="styles/layout.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Selection List</title>
+  <!-- Font and External CSS -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+  <link rel="stylesheet" href="./css/des.css">
 </head>
 <body>
-    <header>
-        <h1>Group Member's Details</h1>
-    </header>
 
-    <section>
-        <h2>Group Information</h2>
-        <dl>
-            <fieldset><legend><dt><h3>Group Name:</h3></dt></legend> <dd>Buồng tổng chín</dd></fieldset>
-            <fieldset><legend><dt><h3>Group ID:</h3></dt></legend> <dd>15</dd></fieldset>
-            <fieldset><legend><dt><h3>Tutor’s Name:</h3></dt></legend> <dd>Mr. Vu Ngoc Binh</dd></fieldset>
-        </dl>
-    </section>
+  <!-- Back-to-Top Button -->
+  <a href="#top" class="back-to-top">&#8679;</a>
 
-    <section>
-        <h2>Members & Contributions</h2>
-        <dl>
-            <dt>Nguyen Duy Hoang:</dt> <dd>Group's members detail page</dd>
-            <dt>Bao Chung:</dt> <dd>Home Page</dd>
-            <dt>Trong Tin:</dt> <dd>Job Application Page</dd>
-            <dt>Vinh Khoa:</dt> <dd>Position description page</dd>
-        </dl>
-    </section>
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#">JOBS</a></li>
+      <li><a href="#">ABOUT</a></li>
+      <li><a href="#">APPLY</a></li>
+      <li><a href="#">ENHANCEMENT</a></li>
+    </ul>
+  </nav>
 
-    <section>
-        <h2>Group Members</h2>
-        <div class="members-container">
-            <figure>
-                <a href="https://www.facebook.com/nguyen.duy.hoang.702166" target="_blank">
-                    <img src="images/duyhoang.jpg" alt="Duy Hoàng">
-                </a>
-                <figcaption>Duy Hoàng (Leader)</figcaption>
-            </figure>
+  <!-- SECTION: Hero -->
+  <section id="hero">
+    <div class="header-mid">
+      <h1>Group Details</h1>
+      <h2>ID:15</h2>
+      <h2>↓↓</h2>
+    </div>
+  </section>
 
-            <figure>
-                <a href="https://www.facebook.com/congchua.buoito.77964201" target="_blank">
-                    <img src="images/baochung.jpg" alt="Bảo Chung">
-                </a>
-                <figcaption>Bảo Chung</figcaption>
-            </figure>
+  <!-- SECTION: Heading for Job List -->
+  <h2 style="text-align: center; font-family: 'Audiowide', sans-serif;">GROUP MEMBERS:</h2>
 
-            <figure>
-                <a href="https://www.facebook.com/tin.nguyen.2403" target="_blank">
-                    <img src="images/trongtin.jpg" alt="Trọng Tín">
-                </a>
-                <figcaption>Trọng Tín</figcaption>
-            </figure>
+  <!-- SECTION: Job Listings -->
+  <section id="job-listings">
 
-            <figure>
-                <a href="https://www.facebook.com/dauphai.jasmint" target="_blank">
-                    <img src="images/vinhkhoa.jpg" alt="Vĩnh Khoa">
-                </a>
-                <figcaption>Vĩnh Khoa</figcaption>
-            </figure>
+    <!-- JOB CARD: SOFTWARE DEVELOPER -->
+    <div class="job-card">
+      <img
+        src="images/chungtinh.jpg"
+        alt="Software Developer Image"
+        class="job-image"
+      >
+      <details>
+        <summary>Bao Chung 💻</summary>
+        <div class="details-content">
+          <p><strong>Position: Home Page</strong></p>
+
         </div>
-    </section>
+      </details>
+    </div>
 
-    <section>
-        <h2>Group Timetable</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Day</th>
-                    <th>Time</th>
-                    <th>Activity</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Monday</td>
-                    <td>9 AM - 12 PM</td>
-                    <td>Team's online conference</td>
-                </tr>
-                <tr>
-                    <td>Wednesday</td>
-                    <td>1 PM - 4 PM</td>
-                    <td>Coding Session</td>
-                </tr>
-                <tr>
-                    <td>Sunday</td>
-                    <td>10 AM - 12 PM</td>
-                    <td>Testing & Debugging</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
+    <!-- JOB CARD: GRAPHIC DESIGNER -->
+    <div class="job-card">
+      <img
+        src="images/khoa.jpg"
+        alt="Graphic Designer Image"
+        class="job-image"
+      >
+      <details>
+        <summary>Vĩnh Khoa 🎨</summary>
+        <div class="details-content">
+          <p><strong>Position: Job Application Page</strong></p>
 
-    <section>
-        <h2>Contact Us</h2>
-        <p>Email us at: <a href="mailto:hoangnguyenduy356@gmail.com">hoangnguyenduy356@gmail.com</a></p>
-    </section>
+        </div>
+      </details>
+    </div>
+
+    <!-- JOB CARD: CONSULTANT -->
+    <div class="job-card">
+      <img
+        src="images/trongtin.png"
+        alt="Consultant Image"
+        class="job-image"
+      >
+      <details>
+        <summary>Trọng Tín 📊</summary>
+        <div class="details-content">
+          <p><strong>Position: Position description page</strong></p>
+
+        </div>
+      </details>
+    </div>
+
+    <!-- JOB CARD: TESTER -->
+    <div class="job-card">
+      <img
+        src="images/duyhoang.jpg"
+        alt="Tester Image"
+        class="job-image"
+      >
+      <details>
+        <summary>Duy Hoang 🛠️</summary>
+        <div class="details-content">
+          <p><strong>Position: Group's members detail page</strong></p>
+
+        </div>
+      </details>
+    </div>
+    
+    <h2 style="text-align: center; font-family: 'Audiowide', sans-serif;">GROUP INFORMATION:</h2>
+    <section id="application-steps">    
+        <details>
+          <summary>Click To Open</summary>
+          <div class="details-content">
+            <p><strong>Group Name: Buồng tổng chín</strong></p>
+            <p><strong>Group ID: 15</strong></p>
+            <p><strong>Tutor's Name: Mr. Vu Ngoc Binh</strong></p>  
+          </div>
+        </details>
+  </section>
+
+  <section id="group-timetable">
+    <h2>Group Timetable</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>Time</th>
+          <th>Activity</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Monday</td>
+          <td>9 AM - 12 PM</td>
+          <td>Team's Online Conference</td>
+        </tr>
+        <tr>
+          <td>Wednesday</td>
+          <td>1 PM - 4 PM</td>
+          <td>Coding Session</td>
+        </tr>
+        <tr>
+          <td>Sunday</td>
+          <td>10 AM - 12 PM</td>
+          <td>Testing &amp; Debugging</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>  
+
+  <!-- ASIDE: Company Updates -->
+  <aside>
+    <p style="font-size: 20px;">Company Updates</p>
+    <p>Stay tuned for our upcoming webinars and workshops.</p>
+  </aside>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 789 Technology Company</p>
+  </footer>
+
 </body>
-</html> 
+</html>
