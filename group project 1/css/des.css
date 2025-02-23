@@ -1,0 +1,297 @@
+/* ==========================================================================
+   RESET & BASE STYLES
+   ========================================================================== */
+   * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding: 20px;
+  }
+  
+  /* ==========================================================================
+     TYPOGRAPHY & HEADINGS (with animation)
+     ========================================================================== */
+  h1, h2, h3, h4 {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    margin-bottom: 10px;
+  }
+  
+  /* ==========================================================================
+     HEADER / HERO SECTION
+     ========================================================================== */
+  .header-mid {
+    height: 94vh;
+    font-family: 'Audiowide', sans-serif;
+    text-align: center;
+    color: white;
+    padding: 40px 20px;
+    padding-top: 250px;
+    padding-bottom: 200px;
+    background-image: url('https://images.unsplash.com/photo-1533134486753-c833f0ed4866?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YmxhY2slMjBzYW5kfGVufDB8fDB8fHww');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    margin-bottom: 30px;
+  }
+  
+  /* ==========================================================================
+     NAVIGATION BAR
+     ========================================================================== */
+  .navbar {
+    font-family: 'Audiowide', sans-serif;
+    width: 96%;
+    padding: 10px 2%;
+    margin: 10px auto;
+    display: flex;
+    position: sticky;
+    top: -50px;
+    left: 0;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    transition: top 0.3s ease-in-out;
+    z-index: 1000;
+  }
+  
+  .navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+  }
+  
+  .navbar ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+  }
+  
+  .navbar ul li::after {
+    content: "";
+    height: 3px;
+    width: 0;
+    background: red;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 1s;
+  }
+  
+  .navbar ul li:hover::after {
+    width: 100%;
+  }
+  
+  /* ==========================================================================
+     JOB CARD STYLES
+     ========================================================================== */
+  .job-card {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    width: 35%;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+                opacity 0.6s ease-out, transform 0.6s ease-out;
+    transform: translateY(20px);
+  }
+  
+  .job-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .job-card:hover {
+    transform: scale(1.02);
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Job Image */
+  .job-image {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+  }
+  
+  /* ==========================================================================
+     DETAILS & SUMMARY (Job Description Toggle)
+     ========================================================================== */
+  details {
+    border: none;
+    margin: 0;
+    padding: 15px;
+    background-color: white;
+  }
+  
+  summary {
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 10px 0;
+    outline: none;
+    transition: color 0.3s;
+  }
+  
+  summary:hover {
+    color: #ff0000;
+  }
+  
+  .details-content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+  }
+  
+  details[open] .details-content {
+    max-height: 9900px;
+    opacity: 1;
+  }
+  
+  /* ==========================================================================
+     LIST STYLES
+     ========================================================================== */
+  /* Unordered Lists */
+  ul {
+    text-align: left;
+    padding-left: 0;
+    list-style: none;
+    margin: 10px 0;
+  }
+  
+  /* Ordered Lists (General) */
+  ol {
+    text-align: center;
+    padding-left: 0;
+    list-style: none;
+    margin: 10px 0;
+  }
+  
+  /* ==========================================================================
+     APPLICATION STEPS SECTION (Ordered List with Custom Counter)
+     ========================================================================== */
+  #application-steps {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+  }
+  
+  #application-steps h2 {
+    text-align: center;
+    font-family: 'Audiowide', sans-serif;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  #application-steps ol {
+    counter-reset: step;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #application-steps ol li {
+    counter-increment: step;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 0px;
+    font-size: 17px;
+    color: #5c5c5c;
+    line-height: 1.5;
+    position: relative;
+  }
+  
+  #application-steps ol li::before {
+    content: counter(step) ".";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: bold;
+    color: #ff0000;
+    font-size: 18px;
+  }
+  
+  /* ==========================================================================
+     BUTTONS & INTERACTIVE ELEMENTS
+     ========================================================================== */
+  /* Apply Button */
+  .apply-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #ff0000;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  .apply-btn:hover {
+    background: #740000;
+    transform: scale(1.05);
+  }
+  
+  /* Back-to-Top Button */
+  .back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: black;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  .back-to-top:hover {
+    background: #444;
+  }
+  
+  /* ==========================================================================
+     UTILITY CLASSES
+     ========================================================================== */
+  .view {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  /* ==========================================================================
+     KEYFRAMES
+     ========================================================================== */
+  @keyframes appear {
+    from {
+      opacity: 0;
+      scale: 0.5;
+    }
+    to {
+      opacity: 1;
+      scale: 1;
+    }
+  }
+  
