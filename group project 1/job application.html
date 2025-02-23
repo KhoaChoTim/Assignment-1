@@ -1,83 +1,196 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        /* Form Container */
+        .form-container {
+            background: white;
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* Input Styling */
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: #007BFF;
+            outline: none;
+        }
+
+        /* Button Styling */
+        .button-group {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        input[type="submit"], input[type="reset"] {
+            background: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        input[type="reset"] {
+            background: #dc3545;
+        }
+
+        input[type="submit"]:hover {
+            background: #0056b3;
+        }
+
+        input[type="reset"]:hover {
+            background: #c82333;
+        }
+    </style>
+</head>
 <body>
 
-<h2>Application Forms</h2>
-<table>
-  <caption>Application Forms</caption>
-  <thead>
-  <tr>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-  <td> <label for="fname">First name:</label><br>
-    <input type="text" id="fname" name="fname" value=""placeholder="John"maxlength="20"required></td>
-  </tr>
-  <tr>
-  <td> <label for="lname">Last name:</label><br>
-    <input type="text" id="lname" name="lname" value=""placeholder="Doe"maxlength="20"required></td> </tr>
-    <tr> <td> <label for="Job reference number">Job reference number:</label><br>
-      <input type="text" id="Job reference number" name="Job reference number" value=""maxlength="5"required></td> </tr>
-      <tr>  <td> <label for="Dob">Date of birth:</label><br>
-        <input type="date" id="Dob" name="Dob" value=""></td></tr>
-        <tr> <td> <label>Gender<br>
-          <input type="text" name="Gender"
-          list="Gender">
-          <datalist id="Gender">
-          <option value = "Male">
-          <option value = "Female"
-          required>
-          </datalist>
-          </label></td> </tr>
-          <tr> <td> <label for="Str add">Street Address:</label><br>
-            <input type="text" id="Str add" name="Str add" value=""required></td> </tr>
-            <tr> <td> <label for="Suburb">Suburb/town:</label><br>
-              <input type="text" id="Suburb" name="Suburb" value=""></td> </tr>
-              <tr> <td> <label for="rank">state</label><br>
-                <select name="rank" id="rank" required>
-                <option value="8">VIC</option>
-                <option value="7">NSW</option>
-                <option value="6">QLD</option>
-                <option value="5">Nt</option>
-                <option value="4">WA</option>
-                <option value="3">SA</option>
-                <option value="2">TAS</option>
-                <option value="1">ACT</option>
-                </select></td> </tr>
-                <tr> <td> <label for="Pc">Postcode:</label><br>
-                  <input type="number" id="Pc" name="Pc" value=""maxlength="4"required></td> </tr>
-                  <tr> <td> <label for="Email">Email address:</label><br>
-                    <input type="email" id="Email" name="Email" value="" placeholder="name@domain.com" pattern="^.+@.+\..{2,3}$"required></td> </tr>
-                    <tr> <td> <label for="Cellphone">Phone number:</label><br>
-                      <input type="tel" id="Cellphone" name="Cellphone" value=""placeholder="(##) ####-####"
-                      pattern="\(\d{2}\) +\d{4}-\d{4}" min="8" max="12" required></td> </tr>
-                      <tr> <td> Skill list
-                        <br />
-                        <label><input type="checkbox" name="things[]"
-                        value="DEV" />DEVELOPER</label> <br>
-                        <label><input type="checkbox" name="things[]"
-                        value="DES" />DESIGNER</label> <br>
-                        <label><input type="checkbox" name="things[]"
-                        value="CON" />CONSULTANT</label><br>
-                        <label><input type="checkbox" name="things[]"
-                          value="TEST" />TESTER</label><br>
-                          <label><input type="checkbox" name="things[]"
-                            value="OS" />Other Skill</label></td> <br>
-                          </tr>
-                        <tr> <td> <label>Other Skill<br />
-                          <textarea name="Other skill"
-                          rows="4" cols="20" placeholder="Enter comments here." required>
-                          </textarea>
-                          </label></td> </tr>
-  </table>
-<form action="/action page.php">
- <br>
- <br>
-  <input type="submit" value="Submit" >
-</form> 
+<div class="form-container">
+    <h2>Application Form</h2>
 
-<p>Click the "Submit" button once you finished the form</p>
+    <form action="success.html" method="POST">
+        <table>
+            <tbody>
+                <tr>
+                    <td><label for="fname">First Name:</label>
+                        <input type="text" id="fname" name="fname" placeholder="John" maxlength="20" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="lname">Last Name:</label>
+                        <input type="text" id="lname" name="lname" placeholder="Doe" maxlength="20" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="job_reference_number">Job Reference Number:</label>
+                        <input type="text" id="job_reference_number" name="job_reference_number" maxlength="5" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="dob">Date of Birth:</label>
+                        <input type="date" id="dob" name="dob" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="gender">Gender:</label>
+                        <input type="text" id="gender" name="gender" list="gender_list" required>
+                        <datalist id="gender_list">
+                            <option value="Male">
+                            <option value="Female">
+                        </datalist>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="street_address">Street Address:</label>
+                        <input type="text" id="street_address" name="street_address" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="suburb">Suburb/Town:</label>
+                        <input type="text" id="suburb" name="suburb">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="state">State:</label>
+                        <select name="state" id="state" required>
+                            <option value="VIC">VIC</option>
+                            <option value="NSW">NSW</option>
+                            <option value="QLD">QLD</option>
+                            <option value="NT">NT</option>
+                            <option value="WA">WA</option>
+                            <option value="SA">SA</option>
+                            <option value="TAS">TAS</option>
+                            <option value="ACT">ACT</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="postcode">Postcode:</label>
+                        <input type="number" id="postcode" name="postcode" min="1000" max="9999" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" placeholder="name@domain.com" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(##) ####-####" pattern="\(\d{2}\) \d{4}-\d{4}" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Skill List:</label>
+                        <label><input type="checkbox" name="skills[]" value="DEV"> Developer</label>
+                        <label><input type="checkbox" name="skills[]" value="DES"> Designer</label>
+                        <label><input type="checkbox" name="skills[]" value="CON"> Consultant</label>
+                        <label><input type="checkbox" name="skills[]" value="TEST"> Tester</label>
+                        <label><input type="checkbox" name="skills[]" value="OS"> Other Skill</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="other_skill">Other Skills:</label>
+                        <textarea id="other_skill" name="other_skill" rows="4" cols="20" placeholder="Enter comments here." required></textarea>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="button-group">
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </div>
+    </form>
+</div>
 
 </body>
 </html>
